@@ -1,0 +1,23 @@
+[project]
+name = "overgrant"
+version = "0.1.0"
+description = "Local security scan of AI coding-agent setups (Claude Code, Codex, Cursor, MCP)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+keywords = ["security", "linter", "claude-code", "codex", "cursor", "mcp", "ai-agents"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/overgrant/overgrant"
+Issues = "https://github.com/overgrant/overgrant/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+overgrant = "overgrant.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
