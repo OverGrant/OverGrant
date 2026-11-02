@@ -81,6 +81,7 @@ Severities: C (critical), H (high), M (medium), L (low).
 |---|---|---|
 | SEC001 | H | A value anywhere in a scanned file matches a known token prefix: `sk-ant-`, `sk-proj-`, `ghp_`, `gho_`, `github_pat_`, `glpat-`, `xoxb-`, `xoxp-`, `AKIA[0-9A-Z]{16}`, `AIza[0-9A-Za-z_-]{35}`. Deduplicate with MCP001 |
 | GEN001 | M | A config file in repo scope is a symlink |
+| GEN002 | H | A repo `.claude/settings*.json` is oversized, unreadable or unparseable. Fail closed: it may hide hooks or `apiKeyHelper` |
 
 Each finding has: rule ID, severity, file, a JSON-pointer or TOML key path, a one-sentence
 "why", the exact fix, and the source URL.

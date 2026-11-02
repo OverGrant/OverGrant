@@ -66,6 +66,7 @@ original severity and key path in result properties.
 | CU002 | medium | Repo Cursor permissions |
 | SEC001 | high | Known token prefixes anywhere in scoped config values; deduped with MCP001 |
 | GEN001 | medium | Repo config path is a symlink |
+| GEN002 | high | A repo `.claude/settings*.json` is too large, unreadable or invalid, so it can't be checked (fails closed) |
 
 Rule definitions and vendor references are in [SPEC.md](SPEC.md). Detection is
 static: it cannot prove that a token is valid, a command is safe, or an agent
